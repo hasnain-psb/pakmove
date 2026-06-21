@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PakMove - Smart Delivery System Pakistan</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Toast Notification Container -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <!-- Navigation Header -->
+    <nav class="navbar">
+        <div class="container navbar-content">
+            <a href="#" class="logo" onclick="switchView('landing')">
+                📦 Pak<span>Move</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="auth-buttons" id="navAuthBox">
+                <button class="btn btn-outline" id="loginNavBtn">Login</button>
+                <button class="btn btn-accent" id="signupNavBtn">Book Delivery</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- MAIN VIEW: Landing Page -->
+    <main id="landingView">
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <div class="container hero-grid">
+                <div class="hero-text">
+                    <span class="hero-tag">Pakistan's Premium Smart Delivery Service</span>
+                    <h1>Instant Deliveries,<br><span>Pakistan-Wide.</span></h1>
+                    <p>Send anything, anywhere, anytime. PakMove connects you with active couriers in real-time, offering upfront payment validation, live fare estimates, and premium logistics management.</p>
+                    <div class="hero-ctas">
+                        <button class="btn btn-accent" id="heroBookBtn">Book a Delivery</button>
+                        <button class="btn btn-outline" id="heroTrackBtn">Track Package</button>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="hero-mockup-bg">
+                        <div style="font-weight:700; font-size:1.5rem; margin-bottom:0.5rem; text-align:center;">PakMove Tracker</div>
+                        <div style="font-size:0.9rem; opacity:0.8; margin-bottom:1.5rem; text-align:center;">Real-time shipment tracking simulation</div>
+                        
+                        <div class="hero-mockup-track">
+                            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem;">
+                                <span style="font-weight:700; font-size:0.85rem;">ORDER PM-8409</span>
+                                <span class="badge badge-transit" style="font-size:0.75rem;">In Transit</span>
+                            </div>
+                            <div style="font-size:0.8rem; margin-bottom:0.5rem; color:#d1fae5;">Route: Islamabad → Rawalpindi</div>
+                            <div style="font-size:0.75rem; opacity:0.9; display:flex; justify-content:space-between; align-items:center;">
+                                <span>Driver: Khan Muhammad (Online)</span>
+                                <span class="badge badge-delivered" style="background-color:#059669; color:#ffffff; font-size:0.65rem; padding:0.15rem 0.4rem;">Paid Upfront</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Floating UI badges -->
+                    <div class="hero-card-floating pos-tr">
+                        <span style="font-size:1.5rem;">⚡</span>
+                        <div>
+                            <div style="font-weight:700; font-size:0.85rem;">Fastest Route</div>
+                            <div style="font-size:0.7rem; color:var(--text-muted);">Delivery within 60 mins</div>
+                        </div>
+                    </div>
+                    <div class="hero-card-floating pos-bl">
+                        <span style="font-size:1.5rem;">⭐</span>
+                        <div>
+                            <div style="font-weight:700; font-size:0.85rem;">4.9 Rating</div>
+                            <div style="font-size:0.7rem; color:var(--text-muted);">Trusted by 10k+ customers</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="features" id="features">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Why Choose PakMove?</h2>
+                    <p>Designed to provide maximum convenience, speed, and safety for individuals and corporate shipping requirements in Pakistan.</p>
+                </div>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">🚀</div>
+                        <h3>Upfront Payment Security</h3>
+                        <p>Say goodbye to cash handling issues. Generate bookings instantly, pay upfront securely, and let our verified couriers handle the rest.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">📍</div>
+                        <h3>Interactive Live Tracking</h3>
+                        <p>Track your shipment status transparently through our step-by-step pipeline from payment verification to driver delivery.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🛡️</div>
+                        <h3>Insured Transport Tiers</h3>
+                        <p>Choose from our specialized fleet, ranging from nimble bikes for envelopes to loader trucks for heavy goods.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Us Section -->
+        <section class="about" id="about">
+            <div class="container about-grid">
+                <div class="about-text">
+                    <span class="hero-tag">About Our Mission</span>
+                    <h3>Pioneering the Future of Pakistan's Express Logistics</h3>
+                    <p>Founded in 2026, PakMove was built to resolve traditional transit delays, billing transparency gaps, and courier insecurity within Pakistan's rapid delivery sector.</p>
+                    <p>By pairing high-tech routing protocols with flexible vehicle fleets, we serve local businesses, e-commerce stores, and individuals across Karachi, Lahore, Rawalpindi, Peshawar, and Islamabad.</p>
+                    <div class="about-stats">
+                        <div class="about-stat">
+                            <h4>50K+</h4>
+                            <p>Shipments Delivered</p>
+                        </div>
+                        <div class="about-stat">
+                            <h4>150+</h4>
+                            <p>Active Couriers</p>
+                        </div>
+                        <div class="about-stat">
+                            <h4>99.8%</h4>
+                            <p>Success Rate</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-graphics">
+                    <div class="graphics-item">
+                        <div class="graphics-num">1</div>
+                        <div>
+                            <h5>Express Courier Dispatches</h5>
+                            <p>Real-time fleet lookup matches your booking with the closest available courier within seconds.</p>
+                        </div>
+                    </div>
+                    <div class="graphics-item">
+                        <div class="graphics-num">2</div>
+                        <div>
+                            <h5>Optimized Cargo Routing</h5>
+                            <p>Advanced routing saves fuel and time, guaranteeing the lowest delivery rates per kilometer.</p>
+                        </div>
+                    </div>
+                    <div class="graphics-item">
+                        <div class="graphics-num">3</div>
+                        <div>
+                            <h5>Full Transparency First</h5>
+                            <p>Calculated fees are fixed upfront. No hidden surcharges, extra mileage adjustments, or tips required.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing Section -->
+        <section class="pricing" id="pricing">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Pricing & Estimation Tiers</h2>
+                    <p>Transparent rates customized for packages of all shapes and sizes. Calculate estimates instantly before checkout.</p>
+                </div>
+                <div class="pricing-grid">
+                    <!-- Bike Card -->
+                    <div class="pricing-card">
+                        <div>
+                            <div class="pricing-vehicle">🏍️</div>
+                            <h3>Bike Delivery</h3>
+                            <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:1rem;">Swift & Nimble</p>
+                            <ul class="pricing-features">
+                                <li>Max Weight: 15 Kg</li>
+                                <li>Fits: Envelopes, food, small boxes</li>
+                                <li>Average ETA: 45 - 60 Mins</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <div class="pricing-rate">Rs. 150 <span>+ Rs. 50/kg</span></div>
+                            <button class="btn btn-primary pricing-book-btn" style="width:100%;">Select Bike</button>
+                        </div>
+                    </div>
+
+                    <!-- Rickshaw Card -->
+                    <div class="pricing-card popular">
+                        <span class="popular-badge">Most Popular</span>
+                        <div>
+                            <div class="pricing-vehicle">🛺</div>
+                            <h3>Rickshaw Cargo</h3>
+                            <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:1rem;">Mid-Weight Shipments</p>
+                            <ul class="pricing-features">
+                                <li>Max Weight: 60 Kg</li>
+                                <li>Fits: Small furniture, boxes, luggage</li>
+                                <li>Average ETA: 60 - 90 Mins</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <div class="pricing-rate">Rs. 350 <span>+ Rs. 80/kg</span></div>
+                            <button class="btn btn-accent pricing-book-btn" style="width:100%;">Select Rickshaw</button>
+                        </div>
+                    </div>
+
+                    <!-- Loader Truck Card -->
+                    <div class="pricing-card">
+                        <div>
+                            <div class="pricing-vehicle">🚚</div>
+                            <h3>Loader Truck</h3>
+                            <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:1rem;">Heavy & Bulky Cargo</p>
+                            <ul class="pricing-features">
+                                <li>Max Weight: 500 Kg</li>
+                                <li>Fits: House shifting, bulky wholesale items</li>
+                                <li>Average ETA: 90 - 120 Mins</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <div class="pricing-rate">Rs. 800 <span>+ Rs. 150/kg</span></div>
+                            <button class="btn btn-primary pricing-book-btn" style="width:100%;">Select Loader</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Us Section -->
+        <section class="contact" id="contact">
+            <div class="container contact-grid">
+                <div class="contact-info">
+                    <div>
+                        <span class="hero-tag">Get in Touch</span>
+                        <h2 style="font-size:2.25rem; font-weight:700; color:var(--primary); margin:0.5rem 0 1rem 0;">We're Here to Help</h2>
+                        <p style="color:var(--text-muted);">Have questions about bulk enterprise rates or custom shipping partnerships? Drop us a line or visit one of our operational hubs.</p>
+                    </div>
+
+                    <div class="contact-card">
+                        <div class="contact-icon">📞</div>
+                        <div class="contact-details">
+                            <h4>Support Hotline</h4>
+                            <p>+92 (21) 111-725-668 (PAK-MOVE)</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-card">
+                        <div class="contact-icon">✉️</div>
+                        <div class="contact-details">
+                            <h4>Email Inquiries</h4>
+                            <p>support@pakmove.com</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-offices">
+                        <h4>Head Office Hubs</h4>
+                        <div class="offices-list">
+                            <div>📍 <strong>Karachi:</strong> FTC Building, Block B, Shahrah-e-Faisal</div>
+                            <div>📍 <strong>Lahore:</strong> Phase 5 commercial area, DHA</div>
+                            <div>📍 <strong>Islamabad:</strong> Sector F-7 Markaz, Main Boulevard</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form-container">
+                    <h3>Send Us a Message</h3>
+                    <form id="contactForm" class="dashboard-form">
+                        <div class="form-group">
+                            <label for="contactName">Full Name</label>
+                            <input type="text" id="contactName" class="form-control" placeholder="e.g. Ali Khan" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contactEmail">Email Address</label>
+                            <input type="email" id="contactEmail" class="form-control" placeholder="e.g. ali@example.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contactSubject">Subject</label>
+                            <input type="text" id="contactSubject" class="form-control" placeholder="e.g. Enterprise account inquiry" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contactMessage">Message Details</label>
+                            <textarea id="contactMessage" class="form-control" rows="4" placeholder="How can we assist you?" required style="font-family:inherit; resize:none;"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-accent" style="width:100%;">Submit Inquiry</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- CUSTOMER DASHBOARD PORTAL -->
+    <div class="dashboard-layout" id="customerPortal" style="display: none;">
+        <aside class="sidebar">
+            <div style="display:flex; flex-direction:column; gap:2rem;">
+                <div class="logo" style="color:#ffffff;">
+                    📦 Pak<span>Move</span>
+                </div>
+                <ul class="sidebar-menu">
+                    <li>
+                        <button class="sidebar-link active" data-target="customer-portal">
+                            <span>🏠</span> Dashboard
+                        </button>
+                    </li>
+                </ul>
+            </div>
+            
+            <div style="display:flex; flex-direction:column; gap:1rem;">
+                <div class="sidebar-profile">
+                    <div class="profile-avatar">C</div>
+                    <div class="profile-info">
+                        <h4 class="profile-name">Zain Ahmed</h4>
+                        <p class="profile-role">Customer</p>
+                    </div>
+                </div>
+                <button class="sidebar-link" id="logoutSidebarBtn" style="color:#ef4444; border-top:1px solid rgba(255,255,255,0.1); border-radius:0; padding-top:1rem; margin-top:0.5rem;">
+                    <span>🚪</span> Logout
+                </button>
+            </div>
+        </aside>
+
+        <main class="dashboard-content">
+            <div class="dashboard-header">
+                <h1>Customer Workspace<span>Book your shipments, estimate fares, and track deliveries.</span></h1>
+            </div>
+
+            <div class="dashboard-grid">
+                <!-- Book Shipment Column -->
+                <div class="dashboard-card">
+                    <div class="dashboard-card-header">
+                        <h3>New Delivery Booking</h3>
+                    </div>
+                    <form class="dashboard-form" id="newBookingForm">
+                        <div class="form-group">
+                            <label for="pickupAddress">Pickup Location Address</label>
+                            <input type="text" id="pickupAddress" class="form-control" placeholder="H # 45-B, Sector G-11, Islamabad" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="dropoffAddress">Drop-off Location Address</label>
+                            <input type="text" id="dropoffAddress" class="form-control" placeholder="Block 3, Clifton, Karachi" required>
+                        </div>
+                        
+                        <div class="dashboard-form-row">
+                            <div class="form-group">
+                                <label for="bookingVehicleType">Vehicle Delivery Tier</label>
+                                <select id="bookingVehicleType" class="form-control" required>
+                                    <option value="bike">Bike (Up to 15 kg) - Rs. 150 Base</option>
+                                    <option value="rickshaw">Rickshaw (Up to 60 kg) - Rs. 350 Base</option>
+                                    <option value="truck">Loader Truck (Up to 500 kg) - Rs. 800 Base</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="packageWeight">Weight (kg)</label>
+                                <input type="number" id="packageWeight" class="form-control" step="0.1" min="0.1" value="1.0" required>
+                            </div>
+                        </div>
+
+                        <div class="dashboard-form-row">
+                            <div class="form-group">
+                                <label for="packageType">Package Category</label>
+                                <select id="packageType" class="form-control" required>
+                                    <option value="Document">Document / Letters</option>
+                                    <option value="Electronics">Electronics</option>
+                                    <option value="Fragile Box">Fragile Parcels</option>
+                                    <option value="Apparel">Clothing & Apparel</option>
+                                    <option value="Food/Groceries">Food & Groceries</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="contactNumber">Recipient Contact</label>
+                                <input type="tel" id="contactNumber" class="form-control" placeholder="e.g. 03001234567" required>
+                            </div>
+                        </div>
+
+                        <!-- Live Fare Calculator Box -->
+                        <div class="live-fare-container">
+                            <span class="live-fare-label">Estimated Fare (PKR):</span>
+                            <span class="live-fare-value" id="bookingEstimatedFare">Rs. 200</span>
+                        </div>
+
+                        <button type="submit" class="btn btn-accent" style="width:100%;">Proceed to Payment & Book</button>
+                    </form>
+                </div>
+
+                <!-- Active Tracking Column -->
+                <div style="display:flex; flex-direction:column; gap:1.5rem;">
+                    <!-- Track Select List -->
+                    <div class="dashboard-card" style="padding: 1.5rem;">
+                        <div class="dashboard-card-header" style="margin-bottom:1rem; padding-bottom:0.5rem;">
+                            <h3>Your Shipments</h3>
+                        </div>
+                        <div id="customerBookingsList" style="max-height: 200px; overflow-y: auto; display: flex; flex-direction: column;">
+                            <!-- Bookings will load dynamically here -->
+                        </div>
+                    </div>
+
+                    <!-- Visual Timeline -->
+                    <div class="dashboard-card">
+                        <div class="dashboard-card-header">
+                            <h3>Live Shipment Progress</h3>
+                        </div>
+                        <div id="trackingProgressView">
+                            <!-- Timeline loads dynamically here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- DRIVER PORTAL -->
+    <div class="dashboard-layout" id="driverPortal" style="display: none;">
+        <aside class="sidebar">
+            <div style="display:flex; flex-direction:column; gap:2rem;">
+                <div class="logo" style="color:#ffffff;">
+                    📦 Pak<span>Move</span>
+                </div>
+                <ul class="sidebar-menu">
+                    <li>
+                        <button class="sidebar-link active" data-target="driver-portal">
+                            <span>🚚</span> Driver Panel
+                        </button>
+                    </li>
+                </ul>
+            </div>
+            
+            <div style="display:flex; flex-direction:column; gap:1rem;">
+                <!-- Online Toggle inside profile -->
+                <div class="sidebar-profile" style="flex-direction:column; align-items:stretch; gap:1rem;">
+                    <div style="display:flex; align-items:center; gap:0.75rem;">
+                        <div class="profile-avatar">D</div>
+                        <div class="profile-info">
+                            <h4 class="profile-name">Driver Partner</h4>
+                            <p class="profile-role">Driver</p>
+                        </div>
+                    </div>
+                    <div class="status-toggle-container">
+                        <span class="status-label">Online Status</span>
+                        <label class="switch">
+                            <input type="checkbox" id="driverOnlineStatus" checked>
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                </div>
+                <button class="sidebar-link" id="logoutSidebarBtn" onclick="logout()" style="color:#ef4444; border-top:1px solid rgba(255,255,255,0.1); border-radius:0; padding-top:1rem;">
+                    <span>🚪</span> Logout
+                </button>
+            </div>
+        </aside>
+
+        <main class="dashboard-content">
+            <div class="dashboard-header">
+                <h1>Driver Workspace<span>Review and update your assigned shipping tasks.</span></h1>
+            </div>
+
+            <div class="dashboard-card" style="min-height: 400px;">
+                <div class="dashboard-card-header">
+                    <h3>Assigned Tasks Checklist</h3>
+                </div>
+                <div id="driverTasksList" class="driver-tasks-list">
+                    <!-- Tasks will load here dynamically -->
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- ADMIN PORTAL -->
+    <div class="dashboard-layout" id="adminPortal" style="display: none;">
+        <aside class="sidebar">
+            <div style="display:flex; flex-direction:column; gap:2rem;">
+                <div class="logo" style="color:#ffffff;">
+                    📦 Pak<span>Move</span>
+                </div>
+                
+                <!-- Admin Sidebar Navigation -->
+                <ul class="sidebar-menu">
+                    <li>
+                        <button class="sidebar-link active" id="adminDashboardLink">
+                            <span>📈</span> Shipment Board
+                        </button>
+                    </li>
+                    <li>
+                        <button class="sidebar-link" id="adminManageLink">
+                            <span>👥</span> Manage Admins
+                        </button>
+                    </li>
+                </ul>
+            </div>
+            
+            <div style="display:flex; flex-direction:column; gap:1rem;">
+                <div class="sidebar-profile">
+                    <div class="profile-avatar">A</div>
+                    <div class="profile-info">
+                        <h4 class="profile-name">System Admin</h4>
+                        <p class="profile-role">Admin</p>
+                    </div>
+                </div>
+                <button class="sidebar-link" onclick="logout()" style="color:#ef4444; border-top:1px solid rgba(255,255,255,0.1); border-radius:0; padding-top:1rem;">
+                    <span>🚪</span> Logout
+                </button>
+            </div>
+        </aside>
+
+        <!-- Admin Main Content Wrapper -->
+        <main class="dashboard-content">
+            
+            <!-- SECTION 1: Shipment Board & Stats -->
+            <div id="adminDashboardSection" class="admin-panel-section active">
+                <div class="dashboard-header">
+                    <h1>Admin Intelligence Panel<span>Operational analytics and courier dispatch board.</span></h1>
+                </div>
+
+                <!-- Stats Row -->
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-info">
+                            <h3 id="adminTotalOrders">0</h3>
+                            <p>Total Orders Placed</p>
+                        </div>
+                        <div class="stat-icon">📦</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-info">
+                            <h3 id="adminActiveDrivers">0</h3>
+                            <p>Active Online Drivers</p>
+                        </div>
+                        <div class="stat-icon">🚚</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-info">
+                            <h3 id="adminTotalRevenue">Rs. 0</h3>
+                            <p>Total Sales Revenue</p>
+                        </div>
+                        <div class="stat-icon">💰</div>
+                    </div>
+                </div>
+
+                <!-- Management Table -->
+                <div class="dashboard-card">
+                    <div class="dashboard-card-header">
+                        <h3>Orders Control Table</h3>
+                    </div>
+                    <div class="table-container">
+                        <table class="custom-table">
+                            <thead>
+                                <tr>
+                                    <th>Order ID</th>
+                                    <th>Customer Details</th>
+                                    <th>Shipment Route</th>
+                                    <th>Tracking Status</th>
+                                    <th>Invoice (PKR)</th>
+                                    <th>Assign Courier Courier</th>
+                                </tr>
+                            </thead>
+                            <tbody id="adminOrdersTableBody">
+                                <!-- Table rows will populate dynamically -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SECTION 2: Manage Sub-Admins -->
+            <div id="adminManageSection" class="admin-panel-section">
+                <div class="dashboard-header">
+                    <h1>Manage Admins Directory<span>Add, register, and review system sub-admin access roles.</span></h1>
+                </div>
+
+                <div class="dashboard-grid">
+                    <!-- Create Admin Card -->
+                    <div class="dashboard-card">
+                        <div class="dashboard-card-header">
+                            <h3>Create Sub-Admin Account</h3>
+                        </div>
+                        <form id="createAdminForm" class="dashboard-form">
+                            <div class="form-group">
+                                <label for="adminName">Full Name</label>
+                                <input type="text" id="adminName" class="form-control" placeholder="e.g. Asif Qureshi" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="adminEmail">Email Address</label>
+                                <input type="email" id="adminEmail" class="form-control" placeholder="e.g. asif@pakmove.com" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="adminPassword">Login Password</label>
+                                <input type="password" id="adminPassword" class="form-control" placeholder="••••••••" required>
+                            </div>
+                            <button type="submit" class="btn btn-accent" style="width:100%;">Register Sub-Admin</button>
+                        </form>
+                    </div>
+
+                    <!-- Admins List Table -->
+                    <div class="dashboard-card">
+                        <div class="dashboard-card-header">
+                            <h3>Active System Admins</h3>
+                        </div>
+                        <div class="table-container">
+                            <table class="custom-table">
+                                <thead>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Email</th>
+                                        <th>Scope Role</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="adminUsersTableBody">
+                                    <!-- Populated dynamically -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+    <!-- MODAL: Authentication - LOGIN -->
+    <div class="modal-overlay" id="loginModal">
+        <div class="modal">
+            <div class="modal-header">
+                <h3>Login to PakMove</h3>
+                <button class="close-btn">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="loginForm">
+                    <div class="form-group">
+                        <label for="loginEmail">Email Address</label>
+                        <input type="email" id="loginEmail" class="form-control" placeholder="e.g. customer@pakmove.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="loginPassword">Account Password</label>
+                        <input type="password" id="loginPassword" class="form-control" placeholder="••••••••" required>
+                    </div>
+                    <button type="submit" class="btn btn-accent" style="width:100%; margin-top:0.5rem;">Authenticate Account</button>
+                    
+                    <div style="background:#f1f5f9; border-radius:var(--radius); padding:0.75rem; margin-top:1.25rem; font-size:0.75rem; color:var(--text-muted); line-height:1.4;">
+                        <strong>Default Operational Accounts:</strong><br>
+                        • Customer: customer@pakmove.com (pass: password)<br>
+                        • Driver Partner: driver@pakmove.com (pass: password)<br>
+                        • Super Admin: admin@pakmove.com (pass: adminpassword)
+                    </div>
+
+                    <div class="form-footer">
+                        Don't have an account? <a href="#" id="toSignupLink">Register here</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL: Authentication - SIGNUP (Admin Option Removed) -->
+    <div class="modal-overlay" id="signupModal">
+        <div class="modal">
+            <div class="modal-header">
+                <h3>Register with PakMove</h3>
+                <button class="close-btn">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="registerForm">
+                    <div class="form-group">
+                        <label for="regName">Full Name</label>
+                        <input type="text" id="regName" class="form-control" placeholder="e.g. Zain Ahmed" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="regEmail">Email Address</label>
+                        <input type="email" id="regEmail" class="form-control" placeholder="e.g. user@example.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="regPassword">Secure Password</label>
+                        <input type="password" id="regPassword" class="form-control" placeholder="••••••••" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="regRole">Select Account Type / Role</label>
+                        <select id="regRole" class="form-control" required>
+                            <option value="customer">Customer (Send Packages)</option>
+                            <option value="driver">Driver Partner (Deliver Packages)</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-accent" style="width:100%; margin-top:0.5rem;">Create Account</button>
+                    <div class="form-footer">
+                        Already have an account? <a href="#" id="toLoginLink">Sign in here</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL: UPFRONT PAYMENT MODAL (NEW) -->
+    <div class="modal-overlay" id="paymentModal">
+        <div class="modal" style="max-width: 500px;">
+            
+            <!-- Loading overlay inside modal (transaction spinner) -->
+            <div class="payment-loader-overlay" id="paymentLoaderOverlay">
+                <div class="spinner"></div>
+                <h4 style="font-size:1.15rem; font-weight:700; color:var(--primary);">Processing Transaction</h4>
+                <p style="font-size:0.85rem; color:var(--text-muted); margin-top:0.25rem;">Do not navigate away or refresh this window...</p>
+            </div>
+
+            <div class="modal-header">
+                <h3>Upfront Shipment Payment</h3>
+                <button class="close-btn">&times;</button>
+            </div>
+
+            <div class="modal-body" style="padding: 1.5rem 2rem;">
+                
+                <!-- Booking details summary -->
+                <div style="background:var(--bg-main); border:1px solid var(--border); border-radius:var(--radius); padding:1rem; margin-bottom:1.5rem; font-size:0.9rem;">
+                    <div style="display:flex; justify-content:space-between; margin-bottom:0.5rem;">
+                        <span style="color:var(--text-muted);">Vehicle Tier:</span>
+                        <strong id="payModalVehicle" style="text-transform:capitalize;">Bike</strong>
+                    </div>
+                    <div style="display:flex; justify-content:space-between; margin-bottom:0.5rem;">
+                        <span style="color:var(--text-muted);">Package Weight:</span>
+                        <strong id="payModalWeight">1.0 kg</strong>
+                    </div>
+                    <div style="display:flex; justify-content:space-between; border-top:1px dashed var(--border); padding-top:0.5rem; margin-top:0.5rem; font-size:1.05rem;">
+                        <span style="font-weight:700; color:var(--primary);">Total Fare (PKR):</span>
+                        <strong id="payModalFare" style="color:var(--accent-hover);">Rs. 200</strong>
+                    </div>
+                </div>
+
+                <!-- Payment Option Tabs -->
+                <div class="payment-tabs">
+                    <button class="payment-tab-btn active" onclick="switchPaymentMethod('wallet')">📱 Digital Wallet</button>
+                    <button class="payment-tab-btn" onclick="switchPaymentMethod('card')">💳 Credit/Debit Card</button>
+                </div>
+
+                <form id="paymentModalForm">
+                    
+                    <!-- Wallet Panel -->
+                    <div class="payment-method-panel active" id="panel-wallet">
+                        <div class="form-group">
+                            <label for="walletProvider">Select Wallet Provider</label>
+                            <select id="walletProvider" class="form-control">
+                                <option value="easypaisa">EasyPaisa</option>
+                                <option value="jazzcash">JazzCash</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="walletNumber">Wallet Mobile Number</label>
+                            <input type="tel" id="walletNumber" class="form-control" placeholder="e.g. 03001234567" pattern="[0-9]{11}">
+                        </div>
+                    </div>
+
+                    <!-- Card Panel -->
+                    <div class="payment-method-panel" id="panel-card">
+                        <div class="form-group">
+                            <label for="cardHolderName">Cardholder Name</label>
+                            <input type="text" id="cardHolderName" class="form-control" placeholder="e.g. Zain Ahmed">
+                        </div>
+                        <div class="form-group">
+                            <label for="cardNumber">Card Number</label>
+                            <input type="text" id="cardNumber" class="form-control" placeholder="4242 •••• •••• 4242" maxlength="16">
+                        </div>
+                        <div class="dashboard-form-row">
+                            <div class="form-group">
+                                <label for="cardExpiry">Expiry Date</label>
+                                <input type="text" id="cardExpiry" class="form-control" placeholder="MM/YY" maxlength="5">
+                            </div>
+                            <div class="form-group">
+                                <label for="cardCvv">CVV Code</label>
+                                <input type="password" id="cardCvv" class="form-control" placeholder="•••" maxlength="3">
+                            </div>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-accent" style="width:100%; margin-top:1rem; padding:0.85rem;">Authorize & Complete Payment</button>
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3>📦 Pak<span>Move</span></h3>
+                    <p>Providing cutting-edge express shipping, active driver assignments, and verified digital payment logistics across all major cities of Pakistan.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#pricing">Pricing Plans</a></li>
+                        <li><a href="#features">Service Features</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#contact">Support Contact</a></li>
+                        <li><a href="#">Operational Areas</a></li>
+                        <li><a href="#">FAQ Guide</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">SLA Agreement</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 PakMove Logistics Private Limited. All Rights Reserved.</p>
+                <p>Designed with HSL Accents</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
