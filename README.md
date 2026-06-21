@@ -1,6 +1,6 @@
-# 🚀 PakMove - Full-Stack MERN Logistic & Moving Platform
+# 🚀 PakMove - Full-Stack Logistic & Moving Platform
 
-PakMove is a modern, enterprise-grade full-stack web application designed to streamline moving, logistics, and shifting services. Built using the **MERN Stack**, the platform features a highly decoupled architecture separating the frontend UI from the powerful backend RESTful APIs to ensure high scalability, performance, and security.
+PakMove is a modern full-stack web application designed to streamline moving, logistics, and shifting services. It features a completely decoupled architecture, separating a clean Vanilla JS frontend from a powerful Node.js/Express RESTful API backend, with data securely stored in MongoDB Atlas cloud.
 
 ---
 
@@ -8,47 +8,48 @@ PakMove is a modern, enterprise-grade full-stack web application designed to str
 
 | Layer | Technologies Used |
 | :--- | :--- |
-| **Frontend** | React.js, JavaScript (ES6+), HTML5, CSS3 (Custom Variables & Layouts) |
+| **Frontend** | Vanilla JavaScript (ES6+), HTML5, CSS3 (Custom Theme Variables) |
 | **Backend** | Node.js, Express.js |
-| **Database** | MongoDB |
-| **Architecture** | MVC (Model-View-Controller) & Component-Driven Architecture |
+| **Database** | MongoDB Atlas (Cloud Database) |
+| **Server Tool** | VS Code Live Server (Frontend Hosting) |
 
 ---
 
 ## 🌟 Key Features & Core Modules
 
-### 1. 🔐 Secure Authentication & User Management
-- Robust user signup, login, and authorization system.
-- Secure token-based session handling.
-- Segregated data workflows for seamless user experiences.
+### 1. 🔐 Multi-Role Authentication & Access
+- Secure User Signup, Login, and Authorization system.
+- Direct integration with MongoDB Atlas to store customer profiles.
+- Role-based management supporting **Customers**, **Drivers**, and **Admins** (roles editable securely via DB).
 
 ### 2. 📊 Interactive Centralized Dashboards
-- **User Dashboard:** Allows clients to easily create, track, and manage their moving and shifting orders.
-- **Admin Control Panel:** Provides deep insights into overall activities, data management, and operational stats.
+- **Customer Workspace:** Allows clients to easily create, estimate fares based on item weight/vehicle tier, and track active deliveries.
+- **Admin Control Panel:** Dedicated dashboard layout accessible via admin privileges to overview system stats and data entries.
 
-### 3. 🗺️ Intelligent Routing & Business Logic
-- Optimized controller logic for managing complex state shifts and user flows.
-- Automated pricing, booking workflows, and live notifications.
-- Clean database indexing for faster query responses.
+### 3. 📦 Shipment Management
+- Live calculation of delivery fares based on package category and destination parameters.
+- Order placement system directly hooked into the Express backend API endpoints.
 
 ---
 
-## 📂 Professional Project Structure
+## 📂 Real Project Structure
 
-The project code is meticulously organized into professional design patterns:
+The project code is meticulously organized into a root-level frontend workflow and a dedicated backend server:
 
 ```text
 PakMove/
-├── backend/                  # Robust Backend API
-│   ├── config/               # Database and Server Configurations
-│   ├── controllers/          # Business Logic & Request Handlers
-│   ├── middleware/           # Secure Route Guards & Auth Checks
-│   ├── models/               # MongoDB Schemas & Database Layer
-│   ├── routes/               # Clean & RESTful API Endpoints
-│   └── server.js             # Express Server Initialization
-└── frontend/                 # Interactive Frontend SPA
-    ├── src/
-    │   ├── services/         # API Integration & Axios Configurations
-    │   ├── app.js            # Main Component & Routing Setup
-    │   ├── index.html        # Main DOM Entry Point
-    │   └── styles.css        # Premium UI Styling & Theme Variables
+├── backend/                  # Node.js/Express RESTful API
+│   ├── config/               # Server and Database Configurations
+│   ├── controllers/          # Business Logic (AuthController, OrderController)
+│   ├── middleware/           # Security & Token Verification Guards
+│   ├── models/               # MongoDB Mongoose Schemas (User, Order)
+│   ├── routes/               # REST Endpoints (authRoutes, orderRoutes)
+│   ├── .env                  # Environment Variables (Database Connection Strings)
+│   └── server.js             # Express Server Initialization Entry Point
+├── app.js                    # Core Root-Level Frontend Logic (API Handlers)
+├── index.html                # Premium UI Main Dashboard & Landing Page
+├── styles.css                # Custom Layouts & UI Theme Styling
+└── frontend/                 # React/Modular Architecture Workspace 
+    └── src/
+        └── services/
+            └── api.js        # API Base Config & Authentication Services
