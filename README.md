@@ -4,6 +4,12 @@ PakMove is a modern full-stack web application designed to streamline moving, lo
 
 ---
 
+## 🌐 Live Demo & Preview
+
+You can experience the live application here:  
+👉 **[Launch PakMove Live Project](https://vercel.com/psb840pk-2064s-projects/pakmove-project)**
+
+---
 ## 💻 Tech Stack & Architecture
 
 | Layer | Technologies Used |
